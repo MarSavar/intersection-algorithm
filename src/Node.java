@@ -6,7 +6,14 @@ public class Node {
     public Node(int value, Node next) {
         this.value = value;
         this.next = next;
-        
+
     }
 
+    public int getValue() {
+        return this.value;
+    }
+
+    public Node getNext() {
+        return this.next;
+    }
 }
