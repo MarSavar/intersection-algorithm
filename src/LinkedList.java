@@ -4,6 +4,7 @@ public class LinkedList {
 
 
     public LinkedList(Node... nodes) {
+
         this.head = nodes[0];
         int i = 0;
         while (i < nodes.length - 1) {
@@ -12,13 +13,23 @@ public class LinkedList {
         }
     }
 
-    void addNext(Node node) {
-        Node pointer = this.head;
-        while (pointer.next != null) {
-            pointer = pointer.next;
-        }
-        pointer.next = node;
+    public LinkedList() {
+
     }
+
+    void addNext(Node node) {
+        if (this.head != null) {
+            Node pointer = this.head;
+            while (pointer.next != null) {
+                pointer = pointer.next;
+            }
+            pointer.next = node;
+        } else {
+            this.head = node;
+        }
+    }
+
+
 
     void printList() {
         Node pointer = head;
@@ -31,4 +42,7 @@ public class LinkedList {
         }
         System.out.println(list);
     }
+
+
+
 }
