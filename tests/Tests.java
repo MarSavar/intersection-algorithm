@@ -41,7 +41,7 @@ public class Tests {
     public void testIntersection() {
         LinkedList list1 = new LinkedList(new Node(1), new Node(2), new Node(3));
         LinkedList list2 = new LinkedList(new Node(3), new Node(4), new Node(5));
-        LinkedList list3 = Main.intersect(list1, list2);
+        LinkedList list3 = IntersectLinkedLists.intersect(list1, list2);
         Assert.assertEquals((int)list3.head.value, 3);
         Assert.assertNull(list3.head.next);
     }
